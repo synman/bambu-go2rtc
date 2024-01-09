@@ -13,7 +13,7 @@ Based on PoCs found in https://github.com/bambulab/BambuStudio/issues/1536#issue
 * Use the included shellscripts ([mac](https://github.com/synman/bambu-go2rtc/blob/main/run-on-mac.sh) / [linux arm](https://github.com/synman/bambu-go2rtc/blob/main/run-on-linux-arm.sh)) as reference and make the necessary adjustments for your environment
 * Live Stream - [http://localhost:1984/api/stream.mjpeg?src=bambu_camera](http://localhost:1984/api/stream.mjpeg?src=bambu_camera)
 * Single Frame - [http://localhost:1984/api/frame.jpeg?src=bambu_camera](http://localhost:1984/api/frame.jpeg?src=bambu_camera)
-* RTSP (VLC/etc) - [rtsp://localhost:8554/bambu_camera?video=all&audio=all](rtsp://localhost:8554/bambu_camera?video=all&audio=all)
+* RTSP (VLC/etc) - [rtsp://localhost:8554/bambu_camera](rtsp://localhost:8554/bambu_camera)
 
 ### Screenshot
 
