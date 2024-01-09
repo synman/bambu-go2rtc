@@ -1,0 +1,2 @@
+streams:
+   bambu_camera: "exec:./camera-stream.py"
