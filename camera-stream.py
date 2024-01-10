@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 import struct
-import sys
 import os
 import socket
 import ssl
