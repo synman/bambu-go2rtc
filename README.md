@@ -9,7 +9,7 @@ Based on PoCs found in https://github.com/bambulab/BambuStudio/issues/1536#issue
 * [go2rtc](https://github.com/AlexxIT/go2rtc/releases)
 
 ### Usage
-* Update [camera-stream.py](https://github.com/synman/bambu-go2rtc/blob/main/camera-stream.py) with your Bambu printer's `hostname` and `access_code`
+* `PRINTER_ADDRESS=192.168.1.100 PRINTER_ACCESS_CODE=12345678 ./go2rtc_linux_arm64` with your Bambu printer's `hostname` or IP address and your respective `access_code` for LAN Only Mode
 * Use the included shellscripts ([mac](https://github.com/synman/bambu-go2rtc/blob/main/run-on-mac.sh) / [linux arm](https://github.com/synman/bambu-go2rtc/blob/main/run-on-linux-arm.sh)) as reference and make the necessary adjustments for your environment
 * Live Stream - [http://localhost:1984/api/stream.mjpeg?src=bambu_camera](http://localhost:1984/api/stream.mjpeg?src=bambu_camera)
 * Single Frame - [http://localhost:1984/api/frame.jpeg?src=bambu_camera](http://localhost:1984/api/frame.jpeg?src=bambu_camera)

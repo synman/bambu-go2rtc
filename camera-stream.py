@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 import struct
 import os
@@ -7,8 +7,8 @@ import ssl
 import time
 
 username = 'bblp'
-access_code = ''
-hostname = ''
+access_code = os.environ['PRINTER_ACCESS_CODE']
+hostname = os.environ['PRINTER_ADDRESS']
 port = 6000
 
 MAX_CONNECT_ATTEMPTS = 12

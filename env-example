@@ -1,0 +1,5 @@
+# Run:
+# cp env-example .env
+# then change values in .env
+PRINTER_ADDRESS=10.1.1.10
+PRINTER_ACCESS_CODE=123456789

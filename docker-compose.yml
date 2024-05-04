@@ -1,0 +1,35 @@
+version: '3.8'
+services:
+  bambu-go2rtc:
+    image: "docker.io/alexxit/go2rtc"
+    restart: "unless-stopped"
+    # These are the configuration options if a
+    # traefik setup is in place.
+    #labels:
+    #  - "traefik.enable=true"
+    #  - "traefik.http.routers.bambu-go2rtc.rule=Host(`bambu-webcam.example.com`)"
+    #  - "traefik.http.routers.bambu-go2rtc.entrypoints=websecure"
+    #  - "traefik.http.routers.bambu-go2rtc.tls=true"
+    #  - "traefik.http.services.bambu-go2rtc.loadbalancer.server.port=1984"
+    #  # This is enabling automatic LE certificate generation
+    #  - "traefik.http.routers.bambu-go2rtc.tls.certresolver=leresolver"
+    #  - "traefik.http.routers.bambu-go2rtc.tls.domains[0].main=bambu-webcam.example.com"
+    #  # To enable basic auth uncomment and generate approprioate password using htpasswd
+    #  #- "traefik.http.routers.bambu-go2rtc.middlewares=auth-$COMPOSE_PROJECT_NAME"
+    #  #- "traefik.http.middlewares.auth-bambu-go2rtc.basicauth.users=bambu:$$HTPASSWD_FORMAT_PASSWORD"
+    ports:
+      - "1984:1984"
+    environment:
+      # Remember these values are defaults that can
+      # be overriden by a .env file. Putting sensitive
+      # data in a docker-compose.yml is less secure.
+      # See env-example for the exact format.
+      PRINTER_ADDRESS: ${PRINTER_ADDRESS:-192.168.1.100}
+      PRINTER_ACCESS_CODE: ${PRINTER_ACCESS_CODE:-12345679}
+    volumes:
+      - "./go2rtc.yaml:/config/go2rtc.yaml"
+      - "./camera-stream.py:/config/camera-stream.py"
+
+#networks:
+#  default:
+#    name: traefik
